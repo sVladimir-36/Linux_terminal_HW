@@ -1,0 +1,74 @@
+1) Посмотреть где я=== pwd
+
+2) Создать папку === mkdir first
+
+3) Зайти в папку === cd first
+
+4) Создать 3 папки === mkdir first1 first2 first3
+
+5) Зайти в любоую папку === cd first1
+
+6) Создать 5 файлов (3 txt, 2 json) === touch file1.txt file2.txt file3.txt j_file1.json j_file2.json
+ 
+7) Создать 3 папки === mkdir fol1_1 fol1_2 fol1_3
+
+8. Вывести список содержимого папки === ls -la
+total 4
+drwxr-xr-x 1 RAM 197121 0 Feb 10 20:04 ./
+drwxr-xr-x 1 RAM 197121 0 Feb 10 19:58 ../
+-rw-r--r-- 1 RAM 197121 0 Feb 10 20:01 file1.txt
+-rw-r--r-- 1 RAM 197121 0 Feb 10 20:01 file2.txt
+-rw-r--r-- 1 RAM 197121 0 Feb 10 20:01 file3.txt
+drwxr-xr-x 1 RAM 197121 0 Feb 10 20:04 fol1_1/
+drwxr-xr-x 1 RAM 197121 0 Feb 10 20:04 fol1_2/
+drwxr-xr-x 1 RAM 197121 0 Feb 10 20:04 fol1_3/
+-rw-r--r-- 1 RAM 197121 0 Feb 10 20:01 j_file1.json
+-rw-r--r-- 1 RAM 197121 0 Feb 10 20:01 j_file2.json
+
+9) + Открыть любой txt файл === vim file1.txt
+
+10) + написать туда что-нибудь, любой текст. === в открывшемся окне нажимаем клавишу "I" и вводим текст
+
+11) + сохранить и выйти. === нажимаем клавишу "Esc", :wq
+
+12) Выйти из папки на уровень выше === cd ..
+—
+13) переместить любые 2 файла, которые вы создали, в любую другую папку. === mv /e/COURSES/first/first1/{file1.txt,file2.txt} /e/COURSES/first/first1/fol1_1
+
+14) скопировать любые 2 файла, которые вы создали, в любую другую папку. === cp /e/COURSES/first/first1/{file3.txt,j_file1.json} /e/COURSES/first/first1/fol1_2
+
+15) Найти файл по имени === find -name file1.txt
+
+16) просмотреть содержимое в реальном времени (команда grep) изучите как она работает. === tail -f /e/cours/first/first1/fol1_1/file1.txt
+
+17) вывести несколько первых строк из текстового файла === head -n7 /e/cours/first/first1/fol1_1/file1.txt
+
+18) вывести несколько последних строк из текстового файла ===tail -n5 /e/cours/first/first1/fol1_1/file1.txt
+
+19) просмотреть содержимое длинного файла (команда less) изучите как она работает. === less primer.txt
+
+20) вывести дату и время === date
+=========
+
+Задание *
+1) Отправить http запрос на сервер.
+http://162.55.220.72:5005/terminal-hw-request=== curl 'http://162.55.220.72:5005/terminal-hw-request'
+                                                 curl 'http://162.55.220.72:5005/get_method?name=vladimir&age=32'
+
+
+2) Написать скрипт который выполнит автоматически пункты 3, 4, 5, 6, 7, 8, 13=== #!/bin/bash
+                                                                                 # Зайти в папку
+                                                                                 cd first
+                                                                                 # Создать три папки
+                                                                                 mkdir group{1,2,3}
+                                                                                 # Перейти в папку
+                                                                                 cd group1
+                                                                                 # Создать пять файлов
+                                                                                 touch t{1,2,3}.txt j{1,2}.json
+                                                                                 # Создать 3 папки
+                                                                                 mkdir g1{a,b,c}
+                                                                                 # Вывести список содержимого папки
+                                                                                 ls -la
+                                                                                 # Перемещение файлов в любую другую папку
+                                                                                 mv t{1,2}.txt ./g1a
+
